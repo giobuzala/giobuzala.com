@@ -10,7 +10,7 @@ Desktop.ini
 *~
 .idea/
 
-# Local env and secrets (if you add tooling later)
+# Local env and secrets
 .env
 .env.*
 !.env.example
@@ -19,5 +19,5 @@ Desktop.ini
 *.log
 npm-debug.log*
 
-# Dependencies (if you add Node/npm later)
+# Dependencies
 node_modules/
