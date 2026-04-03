@@ -308,7 +308,7 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
 }
 
 .skills-row {
@@ -471,7 +471,7 @@ button {
 }
 
 .exp-card > .exp-page-preview {
-  margin-left: 1.15rem;
+  margin-left: 0;
 }
 
 .exp-page-preview:hover {
