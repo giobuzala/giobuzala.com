@@ -1,6 +1,6 @@
 const milestones = [
   {
-    title: "Questionnaire design",
+    title: "Questionnaire Design",
     project: "questionnAIre",
     description:
       "AI-assisted questionnaire design tool for building clearer survey instruments.",
@@ -8,7 +8,7 @@ const milestones = [
     github: "https://github.com/giobuzala/questionnAIre",
   },
   {
-    title: "Sample design",
+    title: "Sample Design",
     project: "Honeycomb Studio",
     description:
       "Interactive sampling tool for structuring respondent coverage and study design.",
@@ -16,10 +16,10 @@ const milestones = [
     github: "https://github.com/giobuzala/honeycomb-studio",
   },
   {
-    title: "Data collection",
+    title: "Data Collection",
   },
   {
-    title: "Data processing",
+    title: "Data Processing",
     project: "surveyorso",
     description: "R package for survey research and analytics.",
     link: "https://giobuzala.github.io/surveyorso/",
@@ -29,14 +29,14 @@ const milestones = [
     title: "Weighting",
   },
   {
-    title: "Text analysis",
+    title: "Text Analysis",
     project: "forage",
     description: "AI-assisted open-ended coding agent for survey verbatims.",
     link: "https://giobuzala.shinyapps.io/forage/",
     github: "https://github.com/giobuzala/forage",
   },
   {
-    title: "Political analytics",
+    title: "Political Analytics",
     project: "pollar",
     description:
       "Tools for public opinion measurement and political survey analysis.",
@@ -44,10 +44,10 @@ const milestones = [
     github: "https://github.com/giobuzala/pollar",
   },
   {
-    title: "Advanced analytics",
+    title: "Advanced Analytics",
   },
   {
-    title: "Data visualization",
+    title: "Data Visualization",
     subprojects: [
       {
         project: "Color Den",

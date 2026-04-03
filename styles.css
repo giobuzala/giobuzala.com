@@ -270,6 +270,39 @@ button {
   color: var(--text-emphasis);
 }
 
+.location-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.location-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45);
+  animation: location-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes location-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(52, 211, 153, 0);
+  }
+}
+
+.location-text {
+  letter-spacing: 0.02em;
+}
+
 .about-meta {
   display: flex;
   align-items: center;
@@ -383,7 +416,6 @@ button {
   border-radius: var(--radius);
   padding: 1.15rem 1.25rem;
   background: var(--surface);
-  overflow: hidden;
   transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
 }
 
@@ -396,6 +428,7 @@ button {
 .exp-card-glow {
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   opacity: 0;
   background: radial-gradient(
     500px circle at var(--glow-x, 50%) var(--glow-y, 50%),
@@ -419,6 +452,74 @@ button {
 
 .exp-company a:hover {
   text-decoration: underline;
+}
+
+/* Compact linked page preview */
+.exp-page-preview {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  padding: 0.1rem;
+  padding-right: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.exp-card > .exp-page-preview {
+  margin-left: 1.15rem;
+}
+
+.exp-page-preview:hover {
+  border-color: var(--text-tertiary);
+  box-shadow: 0 4px 16px var(--glow);
+  transform: translateY(-1px);
+}
+
+.exp-page-preview:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.exp-page-preview-img {
+  display: block;
+  width: 76px;
+  height: 48px;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: calc(var(--radius) - 2px);
+  flex-shrink: 0;
+}
+
+.exp-page-preview-label {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-emphasis);
+}
+
+.exp-page-preview--text {
+  padding: 0.3rem 0.7rem;
+}
+
+.exp-page-preview-icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  transition: color 150ms ease;
+}
+
+.exp-page-preview--text:hover .exp-page-preview-icon {
+  color: var(--text);
+}
+
+.exp-page-preview--text .exp-page-preview-label {
+  font-size: 0.85rem;
 }
 
 .exp-roles {
