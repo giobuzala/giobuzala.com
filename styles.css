@@ -522,6 +522,14 @@ button {
   font-size: 0.85rem;
 }
 
+[data-theme="dark"] .exp-page-preview {
+  border-color: #3a3a3a;
+}
+
+[data-theme="dark"] .exp-page-preview:hover {
+  border-color: var(--text-tertiary);
+}
+
 .exp-roles {
   list-style: none;
   padding: 0 0 0 1.15rem;
