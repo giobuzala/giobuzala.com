@@ -12,6 +12,8 @@ const milestones = [
     project: "Honeycomb Studio",
     description:
       "Interactive sampling tool for structuring respondent coverage and study design.",
+    link: "https://honeycomb.streamlit.app/",
+    github: "https://github.com/giobuzala/honeycomb-studio",
   },
   {
     title: "Data collection",
@@ -20,6 +22,7 @@ const milestones = [
     title: "Data processing",
     project: "surveyorso",
     description: "R package for survey research and analytics.",
+    link: "https://giobuzala.github.io/surveyorso/",
     github: "https://github.com/giobuzala/surveyorso",
   },
   {
@@ -29,6 +32,7 @@ const milestones = [
     title: "Text analysis",
     project: "forage",
     description: "AI-assisted open-ended coding agent for survey verbatims.",
+    link: "https://giobuzala.shinyapps.io/forage/",
     github: "https://github.com/giobuzala/forage",
   },
   {
@@ -36,6 +40,8 @@ const milestones = [
     project: "pollar",
     description:
       "Tools for public opinion measurement and political survey analysis.",
+    link: "https://pollar-canada.vercel.app/",
+    github: "https://github.com/giobuzala/pollar",
   },
   {
     title: "Advanced analytics",
@@ -70,21 +76,21 @@ function buildIconLinks(item) {
   const icons = [];
   if (item.link) {
     icons.push(
-      `<a class="card-icon-link" href="${item.link}" target="_blank" rel="noreferrer" aria-label="Visit ${item.project || item.title}" title="Visit site">
+      `<a class="card-icon-link" href="${item.link}" target="_blank" rel="noreferrer" aria-label="Visit ${item.project || item.title}" data-tooltip="Visit site">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
       </a>`
     );
   }
   if (item.github) {
     icons.push(
-      `<a class="card-icon-link" href="${item.github}" target="_blank" rel="noreferrer" aria-label="GitHub repo" title="GitHub repo">
+      `<a class="card-icon-link" href="${item.github}" target="_blank" rel="noreferrer" aria-label="GitHub repo" data-tooltip="GitHub repo">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.11.82-.26.82-.58l-.01-2.05c-3.34.73-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.34-1.76c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.56 2.56 0 0 0 3.5 1 2.56 2.56 0 0 1 .76-1.61c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.33 3.3 1.23a11.38 11.38 0 0 1 6 0c2.28-1.56 3.29-1.23 3.29-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.23 3.22c0 4.61-2.81 5.63-5.48 5.92a2.87 2.87 0 0 1 .82 2.23l-.01 3.3c0 .32.22.7.83.58A12 12 0 0 0 12 .3"/></svg>
       </a>`
     );
   }
   if (item.dropbox) {
     icons.push(
-      `<a class="card-icon-link" href="${item.dropbox}" target="_blank" rel="noreferrer" aria-label="Dropbox" title="Dropbox">
+      `<a class="card-icon-link" href="${item.dropbox}" target="_blank" rel="noreferrer" aria-label="Dropbox" data-tooltip="Dropbox">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.977 2L0 6.2l4.99 3.978L12 6.2 6.977 2zm10.046 0L12 6.2l7.01 3.978L24 6.2 17.023 2zM0 14.156l6.977 4.2L12 14.378l-7.01-3.978L0 14.156zm17.023 4.2L24 14.156l-4.99-3.756L12 14.378l5.023 3.978zM12 15.3l-5.023 3.978L4.99 17.89v1.456L12 23.4l7.01-4.054V17.89L17.023 19.278 12 15.3z"/></svg>
       </a>`
     );
