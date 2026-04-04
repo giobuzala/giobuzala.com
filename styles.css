@@ -873,6 +873,12 @@ button {
   transform: translateX(-50%) translateY(0);
 }
 
+@media (hover: none) {
+  [data-tooltip]::after {
+    display: none;
+  }
+}
+
 .card-links {
   display: flex;
   gap: 0.75rem;
