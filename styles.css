@@ -142,7 +142,6 @@ button {
   font-size: 1.55rem;
 }
 
-
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -227,7 +226,7 @@ button {
   padding: 3rem 2rem 0;
 }
 
-/* NEW: numbered section header with line */
+/* Section header with number and line */
 .section-header {
   display: flex;
   align-items: center;
@@ -414,7 +413,7 @@ button {
   gap: 1.25rem;
 }
 
-/* NEW: card with cursor-following glow */
+/* Card with cursor-following glow */
 .exp-card {
   position: relative;
   border: 1px solid var(--border);
@@ -568,7 +567,7 @@ button {
 .exp-role::before {
   content: "";
   position: absolute;
-  left: calc(-1.15rem + 0px);
+  left: -1.15rem;
   top: 7px;
   width: 7px;
   height: 7px;
@@ -651,11 +650,6 @@ button {
 
 .tab-panel.active {
   display: block;
-}
-
-.section-desc--empty {
-  color: var(--text-tertiary);
-  font-style: italic;
 }
 
 .project-grid {
@@ -791,7 +785,6 @@ button {
 .card-subprojects {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .card-subproject {
@@ -884,30 +877,13 @@ button {
   }
 }
 
-.card-links {
-  display: flex;
-  gap: 0.75rem;
-  margin-top: 0.5rem;
-  font-size: 0.84rem;
-}
-
-.card-links a {
-  color: var(--accent);
-  font-weight: 500;
-}
-
-.card-links a:hover {
-  text-decoration: underline;
-}
-
 /* ------------------------------------------------
    Footer
    ------------------------------------------------ */
 
 .footer {
   max-width: 900px;
-  margin: 0 auto;
-  margin-top: 3rem;
+  margin: 3rem auto 0;
   padding: 0 2rem 2.5rem;
 }
 
@@ -986,18 +962,16 @@ button {
   color: var(--text);
 }
 
-@media (max-width: 700px) {
-  .footer-nav,
-  .footer-copy {
-    display: none;
-  }
-}
-
 /* ------------------------------------------------
    Responsive
    ------------------------------------------------ */
 
 @media (max-width: 700px) {
+  .footer-nav,
+  .footer-copy {
+    display: none;
+  }
+
   .exp-role-content {
     flex-direction: column;
     gap: 0.15rem;

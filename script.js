@@ -255,7 +255,6 @@ function initActiveNav() {
   setActive();
 }
 
-
 function initSmoothNav() {
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (e) => {
