@@ -61,6 +61,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Under construction (toggle via SITE_UNDER_CONSTRUCTION in script.js) */
+.construction-screen {
+  display: none;
+}
+
+body.site-under-construction {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body.site-under-construction .construction-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+body.site-under-construction .skip-link,
+body.site-under-construction .header,
+body.site-under-construction #main,
+body.site-under-construction .footer {
+  display: none !important;
+}
+
+.construction-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  max-width: 20ch;
+  line-height: 1.2;
+}
+
+.construction-note {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 28ch;
+}
+
 a {
   color: inherit;
   text-decoration: none;

@@ -1,3 +1,6 @@
+/** Set to `true` to show only the under-construction screen; `false` runs the full site. */
+const SITE_UNDER_CONSTRUCTION = false;
+
 const milestones = [
   {
     title: "Questionnaire Design",
@@ -266,21 +269,37 @@ function initSmoothNav() {
   });
 }
 
-renderTimeline();
-applyTheme(getInitialTheme());
-initTabs();
-initHeaderScroll();
-initActiveNav();
-initSmoothNav();
+function bootstrap() {
+  if (SITE_UNDER_CONSTRUCTION) {
+    document.body.classList.add("site-under-construction");
+    const gate = document.getElementById("construction-screen");
+    if (gate) {
+      gate.removeAttribute("hidden");
+      gate.setAttribute("aria-hidden", "false");
+    }
+    document.title = "Under construction";
+    applyTheme(getInitialTheme());
+    return;
+  }
 
-themeToggle.addEventListener("click", () => {
-  const nextTheme =
-    document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+  renderTimeline();
+  applyTheme(getInitialTheme());
+  initTabs();
+  initHeaderScroll();
+  initActiveNav();
+  initSmoothNav();
 
-  localStorage.setItem(STORAGE_KEY, nextTheme);
-  applyTheme(nextTheme);
-});
+  themeToggle.addEventListener("click", () => {
+    const nextTheme =
+      document.documentElement.dataset.theme === "dark" ? "light" : "dark";
 
-yearEl.textContent = new Date().getFullYear();
+    localStorage.setItem(STORAGE_KEY, nextTheme);
+    applyTheme(nextTheme);
+  });
 
-initCardGlow();
+  yearEl.textContent = new Date().getFullYear();
+
+  initCardGlow();
+}
+
+bootstrap();
