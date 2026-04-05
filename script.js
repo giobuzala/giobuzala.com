@@ -55,7 +55,7 @@ const milestones = [
       {
         project: "Color Den",
         description:
-          "Fork of a chroma.js-based palette tool, extended with an AI chat assistant to guide palette selection",
+          "Fork of a chroma.js-based color palette tool, extended with an AI chat assistant to guide palette selection",
         link: "https://colorden.vercel.app/",
         github: "https://github.com/giobuzala/color-den",
       },
