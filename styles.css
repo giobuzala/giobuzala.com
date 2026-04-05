@@ -851,6 +851,9 @@ button {
 }
 
 .card-subproject {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 0.6rem;
 }
 
@@ -860,8 +863,12 @@ button {
 
 .card-subproject + .card-subproject {
   margin-top: 0.6rem;
-  padding-top: 0.55rem;
+  padding-top: 0.9rem;
   border-top: 1px solid var(--border);
+}
+
+.card-subproject + .card-subproject .card-project {
+  margin-top: 0;
 }
 
 .card-desc {
