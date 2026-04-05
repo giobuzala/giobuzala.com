@@ -836,7 +836,7 @@ button {
 
 .card-project {
   display: inline-block;
-  margin-top: 0.3rem;
+  margin-top: 0.4rem;
   padding: 0.12rem 0.5rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
@@ -854,9 +854,13 @@ button {
   padding-top: 0.6rem;
 }
 
+.card-subprojects > .card-subproject:first-child {
+  padding-top: 0;
+}
+
 .card-subproject + .card-subproject {
   margin-top: 0.6rem;
-  padding-top: 0.65rem;
+  padding-top: 0.55rem;
   border-top: 1px solid var(--border);
 }
 
