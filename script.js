@@ -237,8 +237,20 @@ function onScrollRaf(callback) {
 
 function initHeaderScroll() {
   const header = document.querySelector(".header");
+  const SCROLL_COMPACT_ENTER = 48;
+  const SCROLL_COMPACT_EXIT = 20;
+  let compact = window.scrollY > SCROLL_COMPACT_ENTER;
+  if (compact) header.classList.add("scrolled");
+
   onScrollRaf(() => {
-    header.classList.toggle("scrolled", window.scrollY > 30);
+    const y = window.scrollY;
+    if (!compact && y > SCROLL_COMPACT_ENTER) {
+      compact = true;
+      header.classList.add("scrolled");
+    } else if (compact && y < SCROLL_COMPACT_EXIT) {
+      compact = false;
+      header.classList.remove("scrolled");
+    }
   });
 }
 
