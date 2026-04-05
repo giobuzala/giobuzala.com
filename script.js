@@ -157,19 +157,46 @@ function getInitialTheme() {
   return localStorage.getItem(STORAGE_KEY) || "light";
 }
 
+function setGlowPosition(el, clientX, clientY) {
+  const rect = el.getBoundingClientRect();
+  const x = ((clientX - rect.left) / rect.width) * 100;
+  const y = ((clientY - rect.top) / rect.height) * 100;
+  el.style.setProperty("--glow-x", x + "%");
+  el.style.setProperty("--glow-y", y + "%");
+}
+
 function initCardGlow() {
   const elements = document.querySelectorAll(
     ".exp-card, .card:not(.card-empty), .skills-row span"
   );
 
   elements.forEach((el) => {
-    el.addEventListener("mousemove", (e) => {
-      const rect = el.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      el.style.setProperty("--glow-x", x + "%");
-      el.style.setProperty("--glow-y", y + "%");
+    el.addEventListener("pointermove", (e) => {
+      setGlowPosition(el, e.clientX, e.clientY);
     });
+
+    el.addEventListener("pointerdown", (e) => {
+      setGlowPosition(el, e.clientX, e.clientY);
+      if (e.pointerType !== "mouse") {
+        el.classList.add("glow-pointer-active");
+        try {
+          el.setPointerCapture(e.pointerId);
+        } catch {
+          /* ignore if capture unsupported */
+        }
+      }
+    });
+
+    function endPointerGlow(e) {
+      if (e.pointerType === "mouse") return;
+      el.classList.remove("glow-pointer-active");
+      if (el.hasPointerCapture?.(e.pointerId)) {
+        el.releasePointerCapture(e.pointerId);
+      }
+    }
+
+    el.addEventListener("pointerup", endPointerGlow);
+    el.addEventListener("pointercancel", endPointerGlow);
   });
 }
 

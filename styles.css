@@ -404,13 +404,15 @@ button {
   pointer-events: none;
 }
 
-.skills-row span:hover {
+.skills-row span:hover,
+.skills-row span.glow-pointer-active {
   transform: translateY(-2px);
   border-color: var(--text-tertiary);
   box-shadow: 0 4px 16px var(--glow);
 }
 
-.skills-row span:hover::before {
+.skills-row span:hover::before,
+.skills-row span.glow-pointer-active::before {
   opacity: 1;
 }
 
@@ -471,7 +473,8 @@ button {
   transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
 }
 
-.exp-card:hover {
+.exp-card:hover,
+.exp-card.glow-pointer-active {
   border-color: var(--text-tertiary);
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--glow);
@@ -491,7 +494,8 @@ button {
   pointer-events: none;
 }
 
-.exp-card:hover .exp-card-glow {
+.exp-card:hover .exp-card-glow,
+.exp-card.glow-pointer-active .exp-card-glow {
   opacity: 1;
 }
 
@@ -785,11 +789,13 @@ button {
   pointer-events: none;
 }
 
-.card:not(.card-empty):hover .exp-card-glow {
+.card:not(.card-empty):hover .exp-card-glow,
+.card:not(.card-empty).glow-pointer-active .exp-card-glow {
   opacity: 1;
 }
 
-.card:hover {
+.card:hover,
+.card.glow-pointer-active:not(.card-empty) {
   border-color: var(--text-tertiary);
   transform: translateY(-2px);
   box-shadow: 0 6px 24px var(--glow);
