@@ -39,7 +39,7 @@ const milestones = [
     github: "https://github.com/giobuzala/forage",
   },
   {
-    title: "Political Analytics",
+    title: "Political Analysis",
     project: "pollar",
     description:
       "Interactive web app that generates Canadian federal election seat projections from polling data",
