@@ -3,7 +3,7 @@ const milestones = [
     title: "Questionnaire Design",
     project: "questionnAIre",
     description:
-      "AI-assisted questionnaire design tool for building clearer survey instruments.",
+      "AI-assisted questionnaire design tool for building clearer survey instruments",
     link: "https://questionn-ai-re.vercel.app/",
     github: "https://github.com/giobuzala/questionnAIre",
   },
@@ -11,7 +11,7 @@ const milestones = [
     title: "Sample Design",
     project: "Honeycomb Studio",
     description:
-      "Interactive sampling tool for structuring respondent coverage and study design.",
+      "Interactive survey sample design tool for streamlining sample planning and study design",
     link: "https://honeycomb.streamlit.app/",
     github: "https://github.com/giobuzala/honeycomb-studio",
   },
@@ -21,7 +21,7 @@ const milestones = [
   {
     title: "Data Processing",
     project: "surveyorso",
-    description: "R package for survey research and analytics.",
+    description: "R package providing a unified toolkit for end-to-end survey research workflows",
     link: "https://giobuzala.github.io/surveyorso/",
     github: "https://github.com/giobuzala/surveyorso",
   },
@@ -31,7 +31,7 @@ const milestones = [
   {
     title: "Text Analysis",
     project: "forage",
-    description: "AI-assisted open-ended coding agent for survey verbatims.",
+    description: "AI-assisted open-ended coding agent for open-ended survey responses",
     link: "https://giobuzala.shinyapps.io/forage/",
     github: "https://github.com/giobuzala/forage",
   },
@@ -39,7 +39,7 @@ const milestones = [
     title: "Political Analytics",
     project: "pollar",
     description:
-      "Tools for public opinion measurement and political survey analysis.",
+      "Interactive web app that generates Canadian federal election seat projections from polling data",
     link: "https://pollar-canada.vercel.app/",
     github: "https://github.com/giobuzala/pollar",
   },
@@ -52,14 +52,14 @@ const milestones = [
       {
         project: "Color Den",
         description:
-          "A tool for creating perceptually correct, colorblind-safe color palettes, with a little help from AI.",
+          "Fork of a chroma.js-based palette tool, extended with an AI chat assistant to guide palette selection",
         link: "https://colorden.vercel.app/",
         github: "https://github.com/giobuzala/color-den",
       },
       {
         project: "Data Visualization Library",
         description:
-          "Charting templates and style guides for analytical reporting.",
+          "A library of custom Excel charts for building advanced visualizations",
         dropbox: "https://www.dropbox.com/scl/fi/c1iho9v29jm744byxom2q/Data-Visualization-Library.pptx?rlkey=dcxbf9gpyk6snxcnkfk4uef94&dl=0",
       },
     ],
