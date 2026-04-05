@@ -179,7 +179,6 @@ function initCardGlow() {
         try {
           el.setPointerCapture(e.pointerId);
         } catch {
-          /* ignore if capture unsupported */
         }
       }
     });
@@ -222,7 +221,6 @@ function initTabs() {
   });
 }
 
-/** Runs `callback` at most once per frame while the window is scrolling. */
 function onScrollRaf(callback) {
   let ticking = false;
   window.addEventListener("scroll", () => {

@@ -63,7 +63,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Inline SVG defs for <use href="#…">; keep in DOM but out of layout */
 .icon-sprite {
   position: absolute;
   width: 0;
@@ -71,7 +70,6 @@ body {
   overflow: hidden;
 }
 
-/* Under construction (toggle via SITE_UNDER_CONSTRUCTION in script.js) */
 .construction-screen {
   display: none;
 }
@@ -280,7 +278,6 @@ button {
   padding: 3rem 2rem 0;
 }
 
-/* Section header with number and line */
 .section-header {
   display: flex;
   align-items: center;
@@ -472,7 +469,6 @@ button {
   gap: 1.25rem;
 }
 
-/* Card with cursor-following glow */
 .exp-card {
   position: relative;
   border: 1px solid var(--border);
@@ -519,7 +515,6 @@ button {
   text-decoration: underline;
 }
 
-/* Compact linked page preview */
 .exp-page-preview {
   display: inline-flex;
   align-items: center;
