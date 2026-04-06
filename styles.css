@@ -205,7 +205,6 @@ button {
   height: 32px;
   border-radius: 6px;
   color: var(--text-tertiary);
-  transition: color 100ms ease, background 100ms ease;
 }
 
 .theme-toggle:hover {
@@ -238,7 +237,6 @@ button {
 .nav a {
   position: relative;
   padding-bottom: 4px;
-  transition: color 200ms ease;
 }
 
 .nav a::after {
@@ -396,7 +394,7 @@ button {
   letter-spacing: 0.01em;
   border: 1px solid var(--border);
   overflow: hidden;
-  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+  transition: transform 200ms ease;
   cursor: default;
 }
 
@@ -441,7 +439,7 @@ button {
   justify-content: center;
   padding: 0.35rem;
   color: var(--text-secondary);
-  transition: color 120ms ease, transform 120ms ease;
+  transition: transform 120ms ease;
   cursor: pointer;
 }
 
@@ -478,7 +476,7 @@ button {
   border-radius: var(--radius);
   padding: 1.15rem 1.25rem;
   background: var(--surface);
-  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  transition: transform 200ms ease;
 }
 
 .exp-card:hover,
@@ -530,7 +528,7 @@ button {
   background: var(--surface);
   text-decoration: none;
   color: inherit;
-  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  transition: transform 200ms ease;
 }
 
 .exp-card > .exp-page-preview {
@@ -574,7 +572,6 @@ button {
   height: 14px;
   flex-shrink: 0;
   color: var(--text-secondary);
-  transition: color 150ms ease;
 }
 
 .exp-page-preview--text:hover .exp-page-preview-icon {
@@ -634,7 +631,6 @@ button {
   border: 1.5px solid var(--dot-inactive);
   background: var(--surface);
   z-index: 1;
-  transition: border-color 180ms ease, background 180ms ease;
 }
 
 .exp-role--active::before {
@@ -685,7 +681,6 @@ button {
   color: var(--text-secondary);
   border-radius: calc(var(--radius) - 2px);
   background: transparent;
-  transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
 
 .tab:hover {
@@ -779,7 +774,7 @@ button {
   border-radius: var(--radius);
   padding: 0.9rem 1rem;
   background: var(--surface);
-  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  transition: transform 200ms ease;
 }
 
 .card:not(.card-empty) .exp-card-glow {
@@ -888,7 +883,7 @@ button {
   justify-content: center;
   padding: 0.15rem;
   color: var(--text-emphasis);
-  transition: color 150ms ease, transform 150ms ease;
+  transition: transform 150ms ease;
 }
 
 .card-icon-link:hover {
@@ -1024,10 +1019,6 @@ button {
 
 .footer-social .social-item {
   padding: 0;
-}
-
-.footer-nav a {
-  transition: color 120ms ease;
 }
 
 .footer-nav a:hover {
