@@ -76,7 +76,6 @@ body {
 
 body.site-under-construction {
   min-height: 100vh;
-  margin: 0;
 }
 
 body.site-under-construction .construction-screen {
@@ -316,10 +315,6 @@ button {
    About
    ------------------------------------------------ */
 
-.about-card {
-  padding: 0;
-}
-
 .about-text {
   font-size: 1.12rem;
   line-height: 1.75;
@@ -529,10 +524,6 @@ button {
   text-decoration: none;
   color: inherit;
   transition: transform 200ms ease;
-}
-
-.exp-card > .exp-page-preview {
-  margin-left: 0;
 }
 
 .exp-page-preview:hover {

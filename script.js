@@ -142,7 +142,7 @@ function renderTimeline() {
 
 function applyTheme(theme) {
   document.documentElement.dataset.theme = theme;
-  const color = theme === "dark" ? "#0d1117" : "#fafafa";
+  const color = theme === "dark" ? "#101010" : "#fafafa";
   themeColorMeta.setAttribute("content", color);
   themeToggle.setAttribute(
     "aria-label",
@@ -151,7 +151,7 @@ function applyTheme(theme) {
 }
 
 function getInitialTheme() {
-  return localStorage.getItem(STORAGE_KEY) || "light";
+  return localStorage.getItem(STORAGE_KEY) === "dark" ? "dark" : "light";
 }
 
 function setGlowPosition(el, clientX, clientY) {
@@ -223,14 +223,18 @@ function initTabs() {
 
 function onScrollRaf(callback) {
   let ticking = false;
-  window.addEventListener("scroll", () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      callback();
-      ticking = false;
-    });
-  });
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        callback();
+        ticking = false;
+      });
+    },
+    { passive: true }
+  );
 }
 
 function initHeaderScroll() {
@@ -288,17 +292,6 @@ function initActiveNav() {
   setActive();
 }
 
-function initSmoothNav() {
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", (e) => {
-      const target = document.querySelector(link.getAttribute("href"));
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth" });
-    });
-  });
-}
-
 function bootstrap() {
   applyTheme(getInitialTheme());
 
@@ -317,7 +310,6 @@ function bootstrap() {
   initTabs();
   initHeaderScroll();
   initActiveNav();
-  initSmoothNav();
 
   themeToggle.addEventListener("click", () => {
     const nextTheme =
