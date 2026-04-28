@@ -1,5 +1,5 @@
 /** Set to `true` to show only the under-construction screen; `false` runs the full site. */
-const SITE_UNDER_CONSTRUCTION = false;
+const SITE_UNDER_CONSTRUCTION = true;
 
 const milestones = [
   {
@@ -302,7 +302,7 @@ function bootstrap() {
       gate.removeAttribute("hidden");
       gate.setAttribute("aria-hidden", "false");
     }
-    document.title = "Under construction";
+    document.title = "Giorgi Buzaladze";
     return;
   }
 
