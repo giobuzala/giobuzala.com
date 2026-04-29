@@ -1,5 +1,5 @@
 /** Set to `true` to show only the under-construction screen; `false` runs the full site. */
-const SITE_UNDER_CONSTRUCTION = true;
+const SITE_UNDER_CONSTRUCTION = false;
 
 const milestones = [
   {
